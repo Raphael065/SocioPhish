@@ -1,5 +1,5 @@
 FROM debian:latest
-LABEL MAINTAINER="https://github.com/Raphael356/SocioPhish"
+LABEL MAINTAINER="https://github.com/alexbieber/SocioPhish"
 
 WORKDIR /SocioPhish/
 ADD . /SocioPhish
