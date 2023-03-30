@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ##   sociophisher 	: 	Automated Phishing Tool
-##   Author     	: 	ALEX BIEBER
+##   Author     	: 	Raphael356
 ##   Version 	    : 	2.2
-##   Github 	    : 	https://github.com/alexbieber
+##   Github 	    : 	https://github.com/Raphael356
 
 
 
@@ -79,7 +79,7 @@ banner() {
 		${PINK}  |________|          | |                                
 		${PINK}                      |_|                ${PINK}Version : 1.0
 
-		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by alexbieber (ALEX BIEBER)${WHITE}
+		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by Raphael356${WHITE}
 	EOF
 }
 
@@ -220,12 +220,12 @@ msg_exit() {
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${GREEN}Author   ${RED}:  ${ORANGE}Alex Bieber ${RED}[ ${ORANGE}Alex-Bieber ${RED}]
-		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/alexbieber
+		${GREEN}Author   ${RED}:  ${ORANGE}Raphael356 ${RED}[ ${ORANGE}Raphael356 ${RED}]
+		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/Raphael356
 		${GREEN}Version  ${RED}:  ${ORANGE}2.2
 
 		${REDBG}${WHITE} Thanks : Adi1090x,MoisesTapia,ThelinuxChoice
-								  DarkSecDevelopers,Alex Bieber,1RaY-1 ${RESETBG}
+								  DarkSecDevelopers,Raphael356,1RaY-1 ${RESETBG}
 
 		${RED}Warning:${WHITE}
 		${CYAN}This Tool is made for educational purpose only ${RED}!${WHITE}
@@ -308,7 +308,7 @@ start_ngrok() {
 	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Ngrok..."
 
     if [[ `command -v termux-chroot` ]]; then
-        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & # Thanks to ALEX BIEBER (https://github.com/alexbieber)
+        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
     else
         sleep 2 && ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
     fi
