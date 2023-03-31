@@ -1,6 +1,6 @@
 #!/bin/bash
-PACKAGE_NAME=SocioPhish
-SOCIOPHISH_VERSION=2.0
+PACKAGE_NAME=SocioPhishRaphael
+SOCIOPHISH_VERSION=2.2
 PACKAGE_ARCH=all
 DISTRO=$(uname -o)
 
